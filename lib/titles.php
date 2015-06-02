@@ -10,8 +10,12 @@ function title() {
     if (get_option('page_for_posts', true)) {
       return get_the_title(get_option('page_for_posts', true));
     } else {
-      return __('Latest Posts', 'sage');
+      return __('Start Small. Think Big', 'sage');
     }
+  } elseif (is_category()) {
+    return single_cat_title( '', false );
+  } elseif (is_author()) {
+    return get_the_author();
   } elseif (is_archive()) {
     return get_the_archive_title();
   } elseif (is_search()) {

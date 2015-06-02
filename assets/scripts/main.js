@@ -19,6 +19,13 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+        $(".nav-toggle").click(function() {
+          $(this).siblings("#menu-primary-navigation").slideToggle();
+        });
+        $("div.carousel-inner").find("div.item:first").addClass("active");
+        $('.carousel').carousel({
+          interval: false
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

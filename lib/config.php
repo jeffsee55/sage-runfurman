@@ -54,6 +54,8 @@ function display_sidebar() {
       [
         'is_404',
         'is_front_page',
+        ['is_page', 'about'],
+        ['is_page', 'elite-athletes'],
         ['is_page_template', 'template-custom.php']
       ]
     );
